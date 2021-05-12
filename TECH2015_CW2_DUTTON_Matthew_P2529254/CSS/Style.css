@@ -1,0 +1,1102 @@
+body {
+  background-color: #fafafb;
+  /*This is used here to dicate the background colour of the site, allowing for white elements to stand out from their backdrop*/
+  margin:-0 0 0 0;
+  /*This zooms in the frame, removing the white borders from teh website.*/
+}
+
+
+
+
+/*Clothes Page Start*/
+.ClothesTab {
+  width: 80vw;
+  height: 25vw;
+  display: flex;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  background-color: white;
+  border-radius: 40px 40px 40px 40px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  /* Here, the "vw" value was utilised for the Width and Height, allowing for these values to be responsive across various viewports and devices.*/
+
+  /*'margin: auto;' is also utilised here, horizontally centring the grouped 'divs', the margin again used to create space above and below the grouped "ClothesTab".*/
+
+  /* Moreover, the "border radius" CSS effect was used to curve the edges of the overall group, the overflowing elements from the groups ("ClothesTab") underlying layers cropped with the use of the CSS "overflow: hidden;" effect, hiding any overlapping underlying layers.*/
+}
+      @media screen and (max-width: 1000px) {
+        .ClothesTab {
+          flex-direction: column;
+          height: auto;
+          /* Here, the "  @media screen and (max-width: 1000px) " is used, changing the flex direction of the "ClothesTab", the layers moving from imagery next to text rows within a mobile viewport, to a column-based design, the images and text in a single column.*/
+        }
+      }
+
+          .ClothesTabImage {
+            width: 30vw;
+            height: 25vw;
+            float: left;
+            border-radius: 40px 40px 40px 40px;
+            overflow: hidden;
+            /*Again, the same values utilised prior were used here, the responsive ("vw") units used to create a responsive image box, again curved ("border-radius") and its overlap cropped ("overflow: hidden;"), the image grouping aligned to the left with "float: left;"*/
+          }
+            @media screen and (max-width: 1000px) {
+              .ClothesTabImage {
+                width: 84vw;
+                height: 60vw;
+                border-radius: 0 0 0 0;
+                /*The "ClothesTabImage" was made respsonsive here, its scaling changing moving from a mobile viewport to a desktop viewport, the "border-radius" reduced to "0", as to allow an appropriate transition between layouts.*/
+              }
+            }
+                  .ClothesTabText {
+                    width: 54vw;
+                    height: 25vw;
+                    float: right;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    /* Here, "word-wrap: break-word;" was used, ensuring any words that went off of the edges of the container would simply be broken onto the next layers.*/
+                  }
+                    @media screen and (max-width: 1000px) {
+                      .ClothesTabText {
+                        width: 84vw;
+                        overflow: scroll;
+                        /* Here, the 'width' was used, adjusting to the new viewport appropriately*/
+                        /* Furthermore, the "overflow: scroll" code was used, as such when the viewport was that of a mobile phone the text may be scrolled.*/
+                      }
+                    }
+
+                        #ClothesImageTab{
+                          float: left;
+                          width: auto;
+                          height: 100%;
+                          /*Here, the "float" is used to align the entire piece toward the left, the "width" set to auto as to ease sizing issues when adjusting the width with the "@media screen and (max-width: 1000px)" code, the height set to "100%" as to again aid with the automation of responsive design.*/
+                        }
+
+                        #ClothesImageTab2{
+                          float: left;
+                          width: 100%;
+                          height: auto;
+                          margin: auto;
+                          /*Here, the "float" is used to align the entire piece toward the left, the "width" set to auto as to ease sizing issues when adjusting the width with the "@media screen and (max-width: 1000px)" code, the height set to "100%" as to again aid with the automation of responsive design.*/
+                        }
+                                  #ClothesTabPara{
+                                    padding: 10px;
+                                    font-family: sans-serif;
+                                    margin-left: 2vw;
+                                    margin-right: 4vw;
+                                    font-size: 1.2vw;
+                                    /* Here, the Clothes page paragraph text was stylised with these CSS effects.*/
+                                    /* For the "margin-left", "margin-right" and "font-size" utilised responsive units, allowing for the text to automatically change with the change in the device viewports used.*/
+                                  }
+                                          @media screen and (max-width: 1000px) {
+                                            #ClothesTabPara{
+                                              font-size: 2vw;
+                                              /* To further support both the ideas of responsiveness and accessibility, the Clothes page paragraph text for a mobile viweport was made further responsive, with a viewport with a width of less than 1000px, meaning the 'font-size' would now increase to "2vw".*/
+                                            }
+                                          }
+
+
+
+
+/*Start of the 'HeaderImage' (For the Gallery, Timeline, Quiz and clothing pages).*/
+.SectionTitle{
+  width: 100%;
+  height: 50vw;
+  background: linear-gradient(to top, #3e183d, #1d1d1b);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* In order to create a reusable header, the style across these pages needed to make use of the same CSS coding, for each.*/
+  /* Here, the width was set to "100%", filling out the pages width completely, the height making use of responsive units, the background set up as a gradient ("background: linear-gradient(to top, #3e183d, #1d1d1b);"), with "background-repeat: no-repeat;", "background-size: cover;" and "background-attachment: fixed;", having been utilised in order to make the gradient a parralax style effect on scrolling.*/
+}
+      .left{
+        width: 50%;
+        height: auto;
+        float: left;
+        margin-top: 25%;
+        /* This acts as padding for the top of the group.*/
+
+        /*This ultimately controls the animation name refernce, its duration and how its timing should function*/
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        /*Here, both the ".left" and the ".right" groups use the same values, their CSS styling identical spare for the inversion of the "float: left;" to "float: right;"*/
+      }
+                  h5{
+                    padding-left: 6vw;
+                    color: white;
+                    font-family: Arial;
+                    font-size: 7vw;
+                    margin: 0;
+                    position: relative;
+                    top: 50%;
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    /* This centers the "h5 text element within the "left" container, the "position: relative;", "top: 50%;" "-ms-transform: translateY(-50%);" and the "  transform: translateY(-50%);" centring the text element vertically*/
+                    }
+    .right {
+        width: 50%;
+        height: auto;
+        float: right;
+        margin-top: 25%;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        /*This repeats the CSS styling which was utilised for ".left", the only change now being the "float", which has changed to left over right*/
+      }
+                          #SectionImage{
+                            /*Here, the responsive "vw" (Viewwidth) units are again utilised, allowing for a consistency in image scale despite a changing viewport size.*/
+                            width: 8vw;
+                            margin: 0;
+                            /* "margin: 0;" is used here to centre the "#SectionImage" within its parent Div.*/
+                            position: relative;
+
+                            /*Again the below displayed CSS code is used to vertically centre the item, this time the image being the item in need of centring, maintaining the same visual alignment across both left and right portions of the entire ".SectionTitle" collection*/
+                            top: 50%;
+                            -ms-transform: translateY(-50%);
+                            transform: translateY(-50%);
+                          }
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+/* Here, the prior mentioned "fadeIn" aniamtion is created with "@keyframes", transitioning from 0 opacity to 1*/
+/*End of the HeaderImage*/
+
+
+
+
+/*Start of 'Gallery' photo grid, the code below sourced from "W3schools. (no date) How TO - Responsive Image Grid. Available at: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp (Accessed: 29 April 2021)."*/
+
+* {
+  box-sizing: border-box;
+  /*The above item of code was directly taken from the source, the code making it so that the div's padding is now included with the height and width.*/
+}
+          .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            /*This code was again sourced directly from the prior established source ("W3schools. (no date) How TO - Responsive Image Grid. Available at: https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp (Accessed: 29 April 2021)")identifying the ".row" as a flexbox, making its contents flex, over that of the traditional wrapping of div items and their contents*/
+          }
+.column {
+  -ms-flex: 33.333%;
+  flex: 33.333%;
+  max-width: 33.333%;
+  padding: 0 4px;
+  /*This area was again directly copied from the prior established source, however over the creation of 4 columns, it was decided that in order to match with the website designs, which had been created prior,that there should only be 3 columns.
+  *As such, the 25% value was therefore replaced with what may be seen now ("33.333%"), 3 equally sized columns now stood next to one another now.*/
+}
+        .column img {
+          margin-top: 8px;
+          vertical-align: middle;
+          width: 100%;
+          /*This code was simply copied from the prior mentioned source, the first line adding space above the ".column img", the scond aligning the image centrally and the third dictating the image width as 100%;*/
+        }
+                    @media screen and (max-width: 800px) {
+                      .column {
+                        -ms-flex: 50%;
+                        flex: 50%;
+                        max-width: 50%;
+                        /* Again, being drawn from the responsive grid source, this code dicatates that when the viewwidth reaches 800px this tells the device that the layout should be comprised of 2 columns not 3, making the image grids responsive the viewport changes*/
+                      }
+                    }
+                                /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+                                @media screen and (max-width: 600px) {
+                                  .column {
+                                    -ms-flex: 100%;
+                                    flex: 100%;
+                                    max-width: 100%;
+                                    /*Alike with the prior discussed item, this also makes the colums of the image grid responsive, this time at 600px (and below) activating, the columns now only 1 wide over the prior 2 and 3, acting more suitably for a smaller viewport, as well as displaying the responsive nature of the website's coding*/
+                                  }
+                                }
+
+
+/*This is the GalleryTextOverlay code, which was primarily sourced from:
+
+ "W3schools. (no date) How TO - Image Hover Overlay. Available at: https://www.w3schools.com/howto/howto_css_image_overlay.asp (Accessed: 29 April 2021)."*/
+
+.container {
+  /*This was added, the code drawn directly from the prior established source*/
+  position: relative;
+  height: 100%;
+  /*The Below code was added afterwards, the code used as it was intended to hide any overlapping elements from creating an unsightly aesthetic.*/
+        overflow: hidden;
+}
+      .image {
+        display: block;
+
+        /*The above code was once again drawn from the source, the display set as "block", the original width and height values having been removed as such.*/
+            /*The Below code was added afterwards to this*/
+               width: 200px;
+               height: 400px;
+               object-fit: cover;
+               background-position: left top;
+              /* Here, the width and height elements differed from the set scaling, as was found within the sourced code, the "object-fit: cover;" used in order to specify how the image should be scaled within its container.*/
+      }
+
+            .overlay {
+              /*The code below was once again copied from the source, the height changed from "100%" to "auto"*/
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: auto;
+              width: 100%;
+              opacity: 0;
+              transition: .5s ease;
+              /*The Below code was added afterwards to this, the original "background-color: #008CBA;" replaced with the "background: linear-gradient(0deg, rgba(255,255,55,0), rgba(1,1,1,1));", as is documented below.
+
+              This new "background" makes use of a transparent gradient, allowing for focus on both the text and its subject image.*/
+                    background: linear-gradient(0deg, rgba(255,255,55,0), rgba(1,1,1,1));
+                    word-wrap: break-word;
+                    overflow: scroll;
+                    /*Moreover, the "word-wrap: break-word;" is used, breaking words as to reduce the text overlap from their containers edges, the "overflow: scroll;" CSS element utilised as to allow for any overly large text paragraphs to simply be scrolled, not effecting their own containers or those surrounding.*/
+            }
+                          .container:hover .overlay {
+                            opacity: 1;
+                            /*This code was again sourced from the prior mentioned source ("W3schools. (no date) How TO - Image Hover Overlay. Available at: https://www.w3schools.com/howto/howto_css_image_overlay.asp (Accessed: 29 April 2021).") the code filling the ovelays opacity when each image is hovered over.*/
+                          }
+                              /*The Below code was added afterwards to this*/
+                                      .container:click .overlay {
+                                        opacity: 1;
+                                        /* As to ensure that mobile users may also take advantage of this feature, a click activated alternative was also created, sporting the same result just with a altered input.*/
+                                      }
+      .text {
+        /*Here, the code was once again sourced from the prior mentioned repository, with only a "bottom" value introduced in order to move the text upwards, the font size also altered as to use responsive units.*/
+
+        /*Additionally, the "text-align" was changed from 'centre' to 'left'*/
+        color: white;
+        font-size: 1vw;
+        position: absolute;
+        bottom: 20%;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+
+        /* The Below code was added afterwards.*/
+                  font-family: Arial;
+                  /* In order to keep in-line with the rest of the site, the "Arial" font face was utilised here*/
+                  width: 60%;
+                  height: 70%;
+                  /* Here, both the width and height values were utilised, containing the text within a more confined area.*/
+      }
+
+      /*Again, to allow for the continuation of a responsive design, the below code chunks were created for the ".text" grouping, adjusting the font size for various viewWidths, making the site more accessible on a variety of devices.*/
+                @media screen and (max-width: 1000px) {
+                  .text {
+                    font-size: 1.5vw;
+                  }
+                }
+                          @media screen and (max-width: 700px) {
+                            .text {
+                              font-size: 2vw;
+                            }
+                          }
+                                      @media screen and (max-width: 400px) {
+                                        .text {
+                                          font-size: 4vw;
+                                        }
+                                      }
+                                                @media screen and (max-width: 400px) {
+                                                  .text {
+                                                    font-size: 6vw;
+                                                  }
+                                                }
+/*End of 'Gallery' photo grid*/
+
+
+
+
+/*Start of the Gallery 'Video'*/
+h6 {
+  font-family: sans-serif;
+  font-size: 4vw;
+  padding-left: 2vw;
+  margin-bottom: -0.4vh;
+  opacity: 0;
+  /*Here, the secondary ("sans-serif") font was utilised, maintaining the typeface theme utilised throughout the site, strictly only making use of "Arial" and "sans-Serif" typography.*/
+
+  /*Moreover, the "font-size", "padding-left" and "margin-bottom" utilised the responsive unit ("vw"), the "opacity" set to "0", allowing for it to be activated via the 'scroll fade-in animation' and brought into view.*/
+}
+    video {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      border-radius: 0 0 0 0;
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      /* Above, the styling for the "video" element was done, first designed for the mobile viewport, with its use of a "100%" width, the border radius at this point being negligable, as that CSS styling wasn't needed on a "100%" width element.*/
+    }
+
+                  @media screen and (min-width: 700px) {
+                    video {
+                      margin: auto;
+                      width:84vw;
+                      border-radius: 40px 40px 40px 40px;
+                      /* This was then adapted for a desktop view, the  width reduced, utilising the "vw" responsive units, reducing the width.
+
+                      *As such, this meant the edges of the element
+                        also needed to be stylised with CSS, as such the "border-radius:" was increased to "40px".*/
+                    }
+                  }
+
+/* This acts as the CSS code for the large paragraph located underneath the "video" element.*/
+.VideoPara{
+  margin: auto;
+  width: 80%;
+  /* Starting off, the margin was set to auto, centrign the group, with the width set to "80%", allowing for the text to be more readable across a variety of device viewports.*/
+  font-size: 3vh;
+  font-family: Arial;
+  /* Moreover, the "font-size:" was set to "3vh", utilising a responsive unit (View Height) to ensure responsive design when scaling betweeen viewports.*/
+  margin-bottom: 3vh;
+  word-wrap: break-word;
+  /* Lastly, a "margin-bottom: 3vh;" was added, adding a responsive spacing below the video paragraph, the "word-wrap: break-word;" utilised to split up the sentences as to not let the line of text flow out of the container.*/
+}
+        @media screen and (max-width: 800px) {
+          .VideoPara {
+            font-size: 1.3vh;
+            /* This code is used, making the large paragraph responsive to the changing viewports across devices, with this code meaning that when the viewWidth is 800px, the font size will reduce to "1.3vh"*.*/
+          }
+        }
+
+/* This acts as CSS code for the video and video poster references*/
+.VideoPara2{
+  margin: auto;
+  width: 80%;
+  font-size: 1.2vh;
+  font-family: Arial;
+  margin-bottom: 1vh;
+  word-wrap: break-word;
+  /*The same CSS styling (as was seen within the prior "VideoPara" grouping) was utilised here, the "font-size" reduced to "1.2vh", and the "margin-bottom" reduced to "1vh".*/
+}
+                    @media screen and (max-width: 800px) {
+                      .VideoPara2 {
+                        font-size: 0.9vh;
+                        /* This smaller paragraph is then made responsive, the "font-size" reduced to "0.9vh", this responsive size reduction occuring when the viewWidth is 800px.*/
+                      }
+                    }
+/*End of the 'Video'*/
+
+
+
+
+/*Start of the 'Timeline' Code*/
+.TimelineSegment {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  /* This acts as a container for the entire Timeline page., the width set to the full page, its contents centred via the "margin: auto;" and the height set to auto to allow it to increase in height automatically.*/
+}
+                  @media screen and (max-width: 1000px) {
+                    .TimelineSegment {
+                      width: 84vw;
+                      /* Here, the width of the layer was made responsive, when the width reaches below 1000px the computer is told to reduce the width to "84vw"*/
+                    }
+                  }
+
+    .TimelineTile {
+      width: 80%;
+      height: auto;
+      margin: auto;
+      opacity: 0;
+      /* Here, the "TimeLineTile" acts as a group for each decades topic areas, the opacity is then set to "0", allowing for the fade-in animation to occur*/
+    }
+          .ImageTimeline {
+            width: 100%;
+            height: 80vh;
+            background-color: white;
+            border-radius: 40px 40px 40px 40px;
+            overflow: hidden;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+            /* The above code was utilised here, setting the scaling (width and height) as has been peformed prior, with responsive units, the groups border radius stylised, allowing for curved edges, the "overflow: hidden;" to ensure the image confromed to this CSS styling.*/
+          }
+              @media screen and (max-width: 700px) {
+                .ImageTimeline {
+                  height: 30vh;
+                  /*As has been displayed prior, this was then made responsive, at a viewing width of 700px this grouping would shrink to a height of 30vh.*/
+                }
+              }
+                    @media screen and (max-width: 500px) {
+                      .ImageTimeline {
+                        height: 25vh;
+                        /*At a 500px view width, the height would further shrink to 25vh.*/
+                      }
+                    }
+                            @media screen and (max-width: 300px) {
+                              .ImageTimeline {
+                                height: 20vh;
+                              /*And finally, at a 300px viewing width the height would again shrink, this time to 20vh.*/
+                              }
+                            }
+              #TimeImage {
+                width: 100%;
+                height: auto;
+                position: relative;
+                margin: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 2vw;
+                /*Above the "TimeImage" id was utilised to position the image itself, aiming to centre it within its parent group.*/
+              }
+        .TextTimeline {
+          width: 100%;
+          word-wrap: break-word;
+            /*Here, "word-wrap: break-word;" was utilised, stopping words from trailing out of their sections.*/
+              }
+              #TimelineParagraph {
+                color: black;
+                font-family: Arial;
+                font-size: 3vh;
+                padding: 2vw;
+                /*The timeline paragraph was then stylised, keeping in line with the prior established text styles uilised prior.*/
+              }
+                    @media screen and (max-width: 600px){
+                      #TimelineParagraph {
+                        font-size: 1vh;
+                        /*Moreover, this was then made responsive, with the viewwidth reaching 600px meaning the font size would reduce to 1vh*/
+                      }
+                    }
+/*End of the 'Timeline' Code*/
+
+
+
+
+/*Start of the 'Quiz Menu Page' Code*/
+/*Quiz Menu Block 1*/
+.QuizMenuContainer {
+  width: 84vw;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+  border-radius: 40px 40px 40px 40px;
+  /*This was created to act as a grouping for the 3 planned menu icons to be used for the quiz, the width set to "84vw", once again making use of responsive units, the edges stylised with a "border-radius: 40px 40px 40px 40px;", the margin set to auto, centreing the contents, with "overflow: hidden;", hiding the images overlay past the curved edges*/
+}
+      .QuizBox1{
+        width: 42vw;
+        height: 84vw;
+        float: left;
+        overflow: hidden;
+        /*This Group was created, acting as the first quiz menu tile, scaled with responsive units ("vw"), floated left, to align it to the left within its parent group, and the "overflow: hidden;" to ensure the contained images don't overlap one another from outside of their respective groups*/
+      }
+            @media screen and (min-width: 1000px){
+              .QuizBox1 {
+                  height:42vw;
+                  /*This was then made responsive, with any devices width above 1000px meaning that the height of this tile would reduce to "42vw".*/
+                }
+              }
+                      #QuizMenuText{
+                        padding-top: 2vw;
+                        padding-left: 6vw;
+                        padding-bottom: 2vh;
+                        text-align: left;
+                          /* One id was utilised for the text elements within each menu icon, the padding utilised to space the text away from each groups edges, alinged left via the "text-align: left;".*/
+                        color: white;
+                        font-family: Arial;
+                        font-size: 6vw;
+                        text-shadow: 2px 2px 5px black;
+                        position: absolute;
+                        z-index: 2;
+                        /* The text was then further stylised, the font set to arial with a responsive text size, stylised with a shadow, and moved infront of other elements via the "z-index: 2;" code.*/
+                      }
+                              .QuizMenuBox1 {
+                                width: 100%;
+                                height: 100%;
+                                background-image: url("../Images/ContentImages/QuizImages/Channapatna-toys.jpg");
+                                /*This image was sourced from: "HPNadig. (no date) Channapatna-toys. Available at: https://commons.wikimedia.org/wiki/File:Channapatna-toys.jpg (Accessed: 26 April 2021)." */
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                  /* This group was utilised as to stylised the image within the menu tile, the "background-image:" used, allowing for the image to be contained within the prior developed tiles values, further stylised with "background-repeat: no-repeat;" and "background-size: cover;".*/
+                                filter: blur(2px);
+                                opacity: 0.9;
+                                transform: scale(1.1)
+                                /* Here, the hover animation was set up with both the "filter: blur(2px);" and "opacity: 0.9;", the "transform: scale(1.1)" used to reduce image edge blur.*/
+                              }
+                                                  .QuizMenuBox1:hover {
+                                                    opacity: 1;
+                                                    filter: blur(0px);
+                                                    transition: opacity .55s ease-in-out;
+                                                    /* The prior mentioend animation was then created, the image becoming non blurred and fully visible.*/
+                                                }
+  /*Quiz Menu Block 2*/
+        .QuizBox2{
+          width: 42vw;
+          height: 42vw;
+          float: right;
+          overflow: hidden;
+            /*This Group was created, this time acting as the second quiz menu tile, scaled with responsive units ("vw"), but this time floated right, aligning it to the right within its parent group, the "overflow: hidden;" again as to ensure the contained images don't overlap one another.*/
+        }
+                    @media screen and (min-width: 1000px){
+                    .QuizBox2 {
+                        height:21vw;
+                        /*This was then made responsive, the height at "21vw" when the devices width reaches 1000px.*/
+                      }
+                    }
+                            .QuizMenuBox2 {
+                              width: 100%;
+                              height: 100%;
+                              background-image: url("../Images/ContentImages/QuizImages/Chess_set.jpg");
+                              /*This image was sourced from: "Houmøller, M. (2014) Chess set. Available at: https://commons.wikimedia.org/wiki/File:Chess_set.jpg (Accessed: 24 April 2021)." */
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              filter: blur(2px);
+                              opacity: 0.9;
+                              transform: scale(1.1)
+                              /* The CSS values from the "QuizMenuBox1" were repeated again here, the "background-image" replaced.*/
+                            }
+                                          .QuizMenuBox2:hover {
+                                            opacity: 1;
+                                            filter: blur(0px);
+                                            transition: opacity .55s ease-in-out;
+                                            /* The prior mentioend animation was again created with this menu icon, the image becoming non blurred and fully visible.*/
+                                    }
+  /*Quiz Menu Block 3; the below "QuizBox3" and "QuizMenuBox3" code was copied from the prior used "QuizBox2" and "QuizMenuBox2".*/
+          .QuizBox3{
+          width: 42vw;
+          height: 42vw;
+          float: right;
+          overflow: hidden;
+          /*This acts as the third quiz menu tile, once again scaled with responsive units ("vw"), floated right, aligning it to the right within its parent group, "overflow: hidden;" being used again, ensuring the contained images don't overlap.*/
+          }
+                    @media screen and (min-width: 1000px){
+                    .QuizBox3 {
+                    height:21vw;
+                    /*This was again made responsive, any devices width above 1000px reducing the height to "21vw".*/
+                    }
+                  }
+                          .QuizMenuBox3 {
+                            width: 100%;
+                            height: 100%;
+                            background-image: url("../Images/ContentImages/QuizImages/1200px-4_paper_boat.jpg");
+                              /*This image was sourced from: "Sourced from 'Mmohit22. (2017) 4 paper boat. Available at: https://commons.m.wikimedia.org/wiki/File:4_paper_boat.jpg (Accessed: 26 April 2021).".*/
+
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            filter: blur(2px);
+                            opacity: 0.9;
+                            transform: scale(1.1)
+                          }
+                                      .QuizMenuBox3:hover {
+                                        opacity: 1;
+                                        filter: blur(0px);
+                                        transition: opacity .55s ease-in-out;
+                                    }
+/*End of the 'Quiz Menu Page' Code*/
+
+
+
+
+/*Start of Quiz*/
+        /* The below code has been sourced from "Corah, T. (no date) Browser-Based Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md (Accessed: 24 April 2021)."
+
+        /
+
+        "Corah, T. (no date) Maths Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/resources/mathsGameV3/game.html (Accessed: 25 April 2021), with teh "*" code removed. */
+  .QuizContainer {
+  font-family: sans-serif;
+  margin: auto;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  /* This above code was simply drawn from the prior mentioned source, the margin auto used, centering the group, the typeface set, and aligned centrally, moved from the edges with  the "padding: 10px;" code.*/
+
+  /*The below code was then added to stylize the coding as was desired*/
+          background: linear-gradient(to top, #3e183d, #1d1d1b);
+          width: 90vw;
+          height: 90vh;
+          border-radius: 0 0 40px 40px;
+          word-wrap: break-word;
+          /* Here, the original background colour was replaced with the gradient utilised prior within the website, the width and height changed (using responsive units) and the bottom edges of the tile curved ("border-radius: 0 0 40px 40px;"), a word-wrap utilised to refrain the text elements from exiting their bounds.*/
+}
+        .answerContainer {
+          margin: auto;
+          padding: 20px;
+          /* This above code was simply drawn from the prior mentioned source, cented with the margin and padded with "padding: 20px;".*/
+        }
+.answerButton {
+  padding: 20px;
+  color: #544;
+  background-color: #eee;
+  border: 1px solid #666;
+  border-radius: 5px;
+  margin: 2px 5px;
+  text-decoration: none;
+  /* This above code was simply drawn from the prior mentioned source, styling the asnwer buttons, their padding, colouring and spacing between the text and outlines.*/
+}
+
+/*Diverting from the sourced code, a return button was created, as teh code below documents.*/
+        .ReturnQuiz {
+          width: 20vw;
+          height: 10vw;
+          background: linear-gradient(to top, #ddddde, white);
+          border-radius: 40px 40px 40px 40px;
+          margin: auto;
+          margin-bottom: 10vh;
+          /* Here the button was scaled with responsive units ("vw"), the button applied woth a subtle gradient and its edges stylised with "border-radius: 40px 40px 40px 40px;", this item centred via "margin: auto" and responsively spaced with "margin-bottom: 10vh;".*/
+        }
+#ReturnQuizText {
+  color: #413f40;
+  font-family: Arial;
+  font-size: 3vw;
+  padding-top: 3vw;
+  /* The text for this button was then stylised, the Arial typeface repeated, and scaled and padded with responsive units.*/
+}
+/* End of Quiz*/
+
+
+
+
+/* Start of the Home page 'Header'
+Here the below CSS code was sourced from "Online Tutorials (2020) Simple Parallax Scrolling Effect with CSS & Vanilla Javascript. 29 March. Available at: https://www.youtube.com/watch?v=TawH-AqHTXc&t=207s (Accessed: 21 April 2021)." (Online Tutorials, 2020), in order to create the parralax header element.*/
+header {
+  position: relative;
+  width: 100%;
+  height: 160vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* This above code was simply drawn from the prior mentioned source, the width set to "100%", and height set to "160vw", using responsive units to reduce in height when the viewwidth reduces., any overlapping elements removed via "overflow: hidden;", its contents flex styled with "display: flex;" and all of this centred with "justify-content: center;" and "align-items: center;"*/
+}
+                @media screen and (min-width: 1000px){
+                  header {
+                    height:75vw;
+                    /* The height of this was further made responsive with the heigth reducign when the viewports width is over 1000px.*/
+                  }
+                }
+                /* Moreover, this is also used to ensure the header contents are centered within the desktop frame.*/
+
+        /* Two elements("header:before" and "header:after") were ultimately removed here as they created a gradient effect which wasn't needed in the design.*/
+
+    header img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      /* Once again the code above was directly drawn from the source, styling the header elements images as such, ensuring that their width spans across the page width both its width and height, the "object-fit" set to cover.*/
+    }
+                            #ParralaxTextSection {
+                            position: relative;
+                            color: white;
+                            font-size: 7vw;
+                            z-index: 1;
+                            /*Above, the code was drawn from the prior established source, the colour changed to white, the font size changed to "7vw" over using "10em", and the text position ("z-index: 1;") was kept the same at "1".*/
+                                  font-family: arial;
+                                  padding-bottom: 20vw;
+                                  animation-name: fadeIn;
+                                  animation-duration: 1s;
+                                  animation-timing-function: linear;
+                                  /*After which, the font was then styled with the prior established typeface, the text then padded with responsive units ("20vw") and ultimately animated with the "fadeIn" aniamtion (created for headers across the site) linked with the "animation-name: fadeIn;" and the duration dicated with " animation-duration: 1s;" and "animation-timing-function: linear;"*/
+                            }
+#Front{
+  z-index: 2;
+  /* Last of all, the code was again copied from the source, utilising "z-index: 2;" to position this layer infornt of the others.*/
+}
+/* End of the 'Header'*/
+
+
+
+
+/* Start of the 'About'*/
+      h2{
+        font-family: sans-serif;
+        color: white;
+        font-size: 2.7vw;
+        padding-left: 4vw;
+        /*The header for each topic was stylised under one value ("h2"), the second of the two selected site fonts (arial and sans serif) being used*/
+      }
+                    @media screen and (max-width: 800px){
+                      h2{
+                        padding-left: 8vw;
+                        /*The "h2" padding was then made responsive, with the viewport width lowering to 800px increasing the left hand side padding*/
+                      }
+                    }
+                          @media screen and (max-width: 450px){
+                              h2{
+                                font-size: 6vw;
+                                /*Moreover, this "h2" header element was again made responsive, this time the fot size increased when the device width is lowered to 450px*/
+                            }
+                          }
+        /* Here, the "h2" text element was stylised, with responsive units used to do so ("vw"), with the "  @media screen and (max-width:" utilised as to adjust the left padding at 800px view width and to increase the font size to "6vw" at a width of 450px.*/
+      .About{
+        width: 100%;
+        height: auto;
+        padding-bottom: 20vh;
+        top: 0;
+        margin: auto;
+        background: linear-gradient(to top, #3e183d, #1d1d1b, #1d1d1b);
+        /* Here, the intial width was set to "100%", allowing for the effects of the ".About" to effect the entire display of this particular section, "margin: auto;" used to center content, with "top: 0" used to make the space between the top of the about and below the Home page's parralax header non-visible*/
+        /* Moreover, to gain a slight increase of space between both this ".About" and the footer, a "  padding-bottom: 20vh;" was used.*/
+      }
+
+            .AboutTile{
+              width: 80%;
+              height: auto;
+              overflow: hidden;
+              opacity: 0;
+              margin: auto;
+              /*To further secure a lack of border breaking from the about page's contents, another grouping was created, its width 20% shorter, allowing for a 10% margin either side,*/
+            }
+                .AboutImage {
+                  width: 40%;
+                  height: auto;
+                  float: left;
+                  padding: 70px;
+                  background-color: inherit;
+                  /* The image group is then placed within the prior grouping (".AboutTile"), taking up 40% of the width and floated left within the scene, with padding already considered as to ease any editing which may be required later on, the groups height set at "auto", ensuring that the image wouldn't get cropped.*/
+                }
+                                  @media screen and (max-width: 450px){
+                                      .AboutImage{
+                                      width:100%;
+                                      /*At 450px this width was changed, allowing the icon to appear as a column format above the icons related text.*/
+                                    }
+                                  }
+
+                      #TheAboutImagery{
+                        width: 8vw;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding-bottom: 10;
+                        /*For the imagery itself, its own scaling needed to be used, removing thte restrictions of a parent group sizing it, as such the responsive "vw" units were utilised as to adjust the width of the image itself, which had been "id" tagged.*/
+                      }
+                                    @media screen and (max-width: 450px){
+                                        #TheAboutImagery{
+                                        width:18vw;
+                                        /*Here, the size of the image was ultimately increased for the viewwidth at this size ("450px") as the prior responsive value ("vw") does not function too perfectly when on a thin width mobile viewport.*/
+                                      }
+                                    }
+                .AboutText{
+                  width: 60%;
+                  height: auto;
+                  float: left;
+                  padding-right: 10vw;
+                  background-color: inherit;
+                  /*Here, teh parent grouping, acting as a container, for the About pages text, was created, its width reduced to 60px, appearing more appropriately for desktop viewing*/
+                }
+                                  @media screen and (max-width: 450px){
+                                      .AboutText{
+                                      width:100%;
+                                      /*Adding toward this, the prior mentioned "AboutText" was then made responsive, with when the viewport width reaches 450px, the above width value would become true*/
+                                    }
+                                  }
+
+                      #AboutParagraph{
+                      font-size: 1.5vw;
+                      color: white;
+                      font-family: Arial;
+                      /*Here, the paragraph had simple styling effects applied unto it, its font size utilising responsive scaling units.*/
+                      }
+                              @media screen and (max-width: 900px){
+                                #AboutParagraph{
+                                  font-size: 3vw;
+                                  /* As the width decreases, the Inspect Tool allowed for this text to be adjusted, its size increased at the fall to a "900px" Viewwidth.*/
+                                }
+                              }
+                                        @media screen and (max-width: 450px){
+                                          #AboutParagraph{
+                                            font-size: 4vw;
+                                            /* Again, as the width decreases, the font size once again increased*/
+                                          }
+                                        }
+/* End of the 'About'*/
+
+
+
+
+/* Start of the 'Navigation Bar'*/
+        nav {
+         overflow: hidden;
+         background-color: white;
+         position: fixed;
+         width: 80%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         float: inherit;
+         margin: auto;
+         left: 10%;
+         bottom: 1.5%;
+         border-radius: 40px 40px 40px 40px;
+         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+         z-index: 3000;
+         opacity: 97%;
+         /* Here, the main navaigation bar is stylised, its overflow hidden, ensuring that no content exitis the group, "position: fixed;
+         bottom: 0;" utilised as to stick the menu bar to the bottom of the page, the contents centred with "align-items: center;", "ustify-content: center;", "margin: auto;" and "float: inherit;", moved infront off the other contents with the use of "z-index: 3;", bringing it forward in perspective. */
+
+         /* Moreover, padding was created with both "left: 10%;" and " bottom: 1.5%;", the edges curved via the use of "border-radius: 40px 40px 40px 40px;", the same box shadow utilised prior repeated to maintain its theme ("box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);").*/
+        }
+nav a {
+ display: inline-block;
+ padding: 14px 14px;
+ margin: auto;
+ /* Here, the links within the navigation bar were stylised,arranged in order to give them even separation and appropriatespacing, ensuring legibility.*/
+}
+      nav a:hover {
+        background-color: #EEEEEE;
+        /* This animation changes the viewbox colour of each icon as it is hovered over with a mouse pointer.*/
+      }
+              .Home {
+                float: inherit;
+                width:auto;
+                height: 6vh;
+                margin: auto;
+              }
+              /*After having imported each of the ".svg" menu icons, these were then stylised, their height responsive, adjusting to the viewheight of the device being used, with an automated width as to allow this to increase without squashing, with "float: inherit;" and "margin: auto;" being utilised as to position and centre each menu icon correctly, this CSS styling being copied for each.*/
+                            @media screen and (max-width: 500px){
+                              .Home{
+                                height: 3vh;
+                                /* Here, when the viewwidth reaches 500px, the height of the menu icons will half as the viewport will be too small as to allow for larger icons to function correctly.*/
+                              }
+                            }
+                            /*The above code was then repeated and appropriately tagged for each areas respectively*/
+                      .Gallery {
+                      float: inherit;
+                      width:auto;
+                      height: 6vh;
+                      margin: auto;
+                    }
+                                  @media screen and (max-width: 500px){
+                                    .Gallery{
+                                      height: 3vh;
+                                    }
+                                  }
+                          .Timeline {
+                          float: inherit;
+                          width:auto;
+                          height: 6vh;
+                          margin: auto;
+                          }
+                                        @media screen and (max-width: 500px){
+                                          .Timeline{
+                                            height: 3vh;
+                                          }
+                                        }
+                              .Quiz {
+                              float: inherit;
+                              width:auto;
+                              height: 6vh;
+                              margin: auto;
+                              }
+                                    @media screen and (max-width: 500px){
+                                      .Quiz{
+                                        height: 3vh;
+                                      }
+                                    }
+                                  .Clothes {
+                                  float: inherit;
+                                  width:auto;
+                                  height: 6vh;
+                                  margin: auto;
+                                  }
+                                          @media screen and (max-width: 500px){
+                                            .Clothes{
+                                              height: 3vh;
+                                            }
+                                          }
+/*End of the 'Navigation Bar'*/
+
+
+
+
+/*Start of the footer*/
+footer {
+  width: 100%;
+  height: auto;
+  /* The width was set 10 "100%", allowing for it to cover the entire bottom portion of the viewport, in-line with the traditional values of a website footer, the height of the footer set to "auto", in order to allow for the footers contents to act responsively with realtive ease.*/
+  background: linear-gradient(to top, #e5e5e4, #fafafb);
+  color: black;
+  font-size: 1.4vh;
+  font-family: Arial;
+  /*The background was set to a subtle gradient, as to contrast subtly from teh menu bar, with the text values desired for the footer being set up here*/
+}
+      .FooterInformation {
+        width: 50%;
+        height: auto;
+        float: left;
+        word-wrap: break-word;
+        /*Here, the width was set to 50%, indicating the "FooterInformation" should only fill up half of its container, with "word-wrap: break-word;", utilised in order to ensure that the paragraph breaks below instead of exiting the bounds of its container.*/
+      }
+      /*text changes */
+                #FooterP {
+                  padding-left: 2vw;
+                  font-family: sans-serif;
+                  font-size: 1.5vw;
+                  padding-bottom: 0.5vh;
+                  color: #433f4f;
+                } /*Here, the text was padded ensuring it was spaced from the edges of the texts container, allowing for it to be read with greater ease, ensuring that the user has greater accessibility when browsing the website. */
+                          #FooterP2 {
+                            width: 100%;
+                            padding-left: 4vw;
+                            font-family: sans-serif;
+                            font-size: 1.3vw;
+                            padding-bottom: 15vh;
+                            color: #433f4f;
+                          } /*Here, the text was padded ensuring it was spaced from the edges of the texts container, allowing for it to be read with greater ease, ensuring that the user has greater accessibility when browsing the website. */
+                                    @media screen and (max-width: 580px){
+                                      #FooterP {
+                                        font-size: 1vh;
+                                        /* When the viewport width reaches 580px, this tells the device that the font size should increase, now using the "vh" unit.*/
+                                      }
+                                      }
+                                            @media screen and (max-width: 580px){
+                                              #FooterP2 {
+                                                font-size: 1vh;
+                                                /* When the viewport width reaches 580px, this tells the device that the font size should increase, now using the "vh" unit.*/
+                                              }
+                                              }
+      /*Footer text changes */
+              .FooterLogo {
+                padding: 1vw;
+                width: 25vw;
+                height: auto;
+                /* This was adjusted, the scale of the ".FooterLogo" make more responsivevia the use of the "vw" units.*/
+              }
+                          @media screen and (max-width: 580px){
+                            .FooterLogo{
+                              width: 22vw;
+                              /*When the view width reaches 580px the width of the logo is decreased to "22vw", ensuring that the "FooterLogo" doesn't obstruct the rest of the footer.
+                              */
+                            }
+                          }
+  /*Footer Social Media Links*/
+  .FooterSocialMediaIcons {
+    width: 40%;
+    height: 70%;
+    /* The scaling of this layer was constructed, filling up the footer as has been found per the designs documented within the website designs.*/
+    margin-right: 2vw;
+    margin-top: 2vh;
+    float: right;
+    /*The margin value was used here with a responsive unit ("vw"), pushing its contents from the right-hand side of the ".FooterSocialMediaIcons", spacing its contents away from the side.*/
+    display: flex;
+    justify-content: space-between;
+    /* Here, both "display: flex;" and the "justify-content: space-between;" were utilised, allowing for the social media icons to be spaced evenly between one another.*/
+  }
+        .Facebook {
+          width: 33%;
+          /*Here the width is reduced to a third =, allowing it to be more appropriatefor its surroundings.*/
+        }
+                .SocialIcon{
+                  width: 10vw;
+                  height: 10vw;
+                  background-image: linear-gradient(to right, #377ec4, #4c5ecf);
+                  /* Here, responsive units were again used as to make the scale of the ".SocialIcon" responsive to various devices, a background gradient created via the use of the "background-image: linear-gradient(to right, #377ec4, #4c5ecf);".*/
+                  border-radius: 100%;
+                  margin: auto;
+                  /*margin auto is used here to center the element within the div, the "border-radius: 100%;" utilised to make the icons backgrounds circular in their shape.*/
+                  opacity: 0.7;
+                  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
+                  position: relative;
+                  /* Here, the "opacity: 0.7;" CSS effect was used as so when the hover effect (below) is activated, the group may increase in its opacity to a solid colour, the "box-shadow" re-used from the Navigation Bar, creating an overarching sense of continuity throughout the website.*/
+                }
+                        .SocialIcon:hover {
+                          opacity: 1;
+                          width: 10.41vw;
+                          height: 10.41vw;
+                          transition: opacity .55s ease-in-out;
+                          /* The ".SocialIcon:hover" code was used here as such when the user hovers on the icon the opacity increases, the icon scales up, and the transition is eased with the "transition: opacity .55s ease-in-out;" CSS effect.*/
+                        }
+    /*These CSS values were again repeated, with both the ".Twitter" and the ".Insta" groupings.*/
+                              .Twitter {
+                                width: 33%;
+                              }
+                                        .SocialIcon2 {
+                                          width: 10vw;
+                                          height: 10vw;
+                                          background-image: linear-gradient(to right, #1db7e2, #389bf5);
+                                          border-radius: 100%;
+                                          margin: auto;
+                                          opacity: 0.7;
+                                          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
+                                          position: relative;
+                                        }
+                                              .SocialIcon2:hover {
+                                                opacity: 1;
+                                                width: 10.41vw;
+                                                height: 10.41vw;
+                                                transition: opacity .55s ease-in-out;
+                                              }
+                                                .Insta {
+                                                  width: 33%;
+                                                }
+                                                            .SocialIcon3 {
+                                                              width: 10vw;
+                                                              height: 10vw;
+                                                              background-image: linear-gradient(to right, #f41352 , #bf64dd);
+                                                              border-radius: 100%;
+                                                              margin: auto;
+                                                              opacity: 0.7;
+                                                              box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
+                                                              position: relative;
+                                                            }
+                                                                  .SocialIcon3:hover {
+                                                                    opacity: 1;
+                                                                    width: 10.41vw;
+                                                                    height: 10.41vw;
+                                                                    transition: opacity .55s ease-in-out;
+                                                                  }
+/*Here a separate code groups were needed to be used as some ".svg" file outputs were smaller than one another. */
+#SocialPic1 {
+  width: 7vw;
+  /*Viewwidth ("vw") is used for responsiveness*/
+  display: block;
+  margin: auto;
+  /* This "margin: auto;" aligns the "#SocialPic1" layer within the centre of its frame, the "display: block;" utilised to both position and hover animate the "#SocialPic1", as can be seen below.*/
+  position: relative;
+  /*Position here allows the movemnet of the layer outside of its constraints, via "top", "left", "right" and "bottom"*/
+  top: 20%;
+  left: 7%;
+}
+        #SocialPic1:hover {
+          top: 17%;
+          transition: top 0.4s ease-in-out;
+        }
+        /* Here, the "#SocialPic1:hover" tag was utilised, telling the device to make these CSS adjustments when the cursor hovers over these icons, the icon moving up, ("top: 17%;"), this transition being eased via the use of "transition: top 0.4s ease-in-out;".*/
+
+/*The same CSS values which were utilised prior were again repeated, with both the "#SocialPic2" and the "SocialPic3", the width adjusted to "6vw" for both.*/
+#SocialPic2 {
+  width: 6vw;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 20%;
+}
+        #SocialPic2:hover {
+          top: 17%;
+          transition: top 0.4s ease-in-out;
+        }
+#SocialPic3 {
+  width: 6vw;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 20%;
+}
+        #SocialPic3:hover {
+          top: 17%;
+          transition: top 0.4s ease-in-out;
+        }
+/*End of the footer */

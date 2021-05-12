@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link href='CSS\style.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <!-- The below code has been sourced from "Corah, T. (no date) Browser-Based Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md (Accessed: 24 April 2021)."
+
+    /
+
+    "Corah, T. (no date) Maths Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/resources/mathsGameV3/game.html (Accessed: 25 April 2021)."-->
+
+    <div class="QuizContainer">
+      <!--Here, the HTML code from the prior mentioned sources was ultimately utilised, although an additional exterior group ("QuizContainer") was introduced to group the "end.html" code.-->
+
+<!--This area of HTML code was simply directly taken from the prior mentioned source, as it was decided that it did not need to be changed excessively-->
+
+      <div class='gameOverScreen'>
+        <h1>Well Done!</h1>
+        <p>You scored <span id='score'></span> point(s)!</p>
+      </div>
+<!--This area of HTML code was simply directly taken from the prior mentioned source, as it was decided that it did not need to be changed excessively, except for some minor gramatical areas.-->
+
+<!--Below a number of "Line Breaker" code element were introduced, creating spacing below the "gameOverScreen" class.-->
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<!--Diverting from the sourced code a return button was created, allowing the user to navigate back toward the main website with relative ease.-->
+      <div class="ReturnQuiz" ><a href="Quiz.html"><p id="ReturnQuizText" ><b>Exit</b></p></div>
+    </div>
+
+
+
+
+  <script type="text/javascript">
+
+  let finalScore = localStorage.getItem('score');
+  /*The 'let' tells the device that the next  word ("finalScore") is a variable, the "localStorage.getItem" code telling the device to retrieve the value of the indicated 'String', with the span utilisng the 'score' id, linking the "finalScore" value to this.*/
+
+  document.getElementById('score').textContent = finalScore;
+    /* The "document.getElementById" identifies the id that matches the prior established 'String', the "textContent" Identifier returning the content of the prior established node / 'String', the "=" assigning (as it's an Assignment) setting a value to the variable (the value here being the "finalScore").*/
+</script>
+
+  </body>
+</html>

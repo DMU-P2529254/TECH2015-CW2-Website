@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- The below code has been sourced from "Corah, T. (no date) Browser-Based Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md (Accessed: 24 April 2021)."
+
+  /
+
+  "Corah, T. (no date) Maths Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/resources/mathsGameV3/game.html (Accessed: 25 April 2021)."-->
+
+      <div class="QuizContainer">
+        <h1>Toy Quiz</h1>
+        <!-- The "h1" tag is utilised here, identifiying to the user the theme of the quiz that the user had now selected.-->
+
+        <h2>Question <span id="currentQuestionNumber"></span></h2>
+        <!-- The above code is used, linking to the below documented 'JavaScript' via the id "currentQuestionNumber", with the 'span' semantic tag acting as an in-line element, used here to tell the user what question they're on within the current quiz that had been chosen.-->
+
+        <p id="question"></p>
+        <!-- Above (the "p id="question" code) fetches the questions, as the user progresses through each, this being further divulged within the JavaScript code, as has been created below.-->
+
+        <div class="answerContainer" id="answers"><a class="answerButton" data-answer="0"></a><a class="answerButton" data-answer="1"></a><a class="answerButton" data-answer="2"></a></div>
+        <!-- Here, the "answerContainer" is used, again fethcing the choice of answers from the JavaScript code, each answer indicated with a "data-answer", the first identifed with "0", the second with "1", and the third with "2", linking to these identifiers, as is presented later on within the JavaScript code.-->
+
+        <br><br><br><br><br>
+        <!-- Here, the "line-break" ("<br>") code is used, creating space below the quiz questions. -->
+    </div>
+
+
+
+
+    <!-- The below code has been sourced from "Corah, T. (no date) Browser-Based Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md (Accessed: 24 April 2021)."
+
+    /
+
+    "Corah, T. (no date) Maths Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/resources/mathsGameV3/game.html (Accessed: 25 April 2021)."-->
+
+    <script type="text/javascript">
+          let questions = [
+            /* Here, the 'let' indicates the next word as a Variable, the questions created with 'String' coding, their possible answers indicated via the use of an 'array', the first "0", the second "1", and the third being "2", as was documented and indicated prior, within the HTML coding*/
+
+            /*Moreover, the "[" (square bracket) then is utilised, this defines the overall array for the 'question' and 'answer' elements.*/
+
+            { question: "When was the slinky released?", answers: [1912, 1943, 1890], correct: 1 },
+            /*Moreover, the "correct: 1 }" code is utilised here, providing an array index, stating which of the prior indicated code is the correct answer, allowing for the "end.html" to record the users score, and their choices of correct answers, as is illustrated later on ("end.html").*/
+
+            { question: "How many coloured sides are on a Rubiks cube?", answers: [6, 4, 8], correct: 0 },
+            /*The prior code is then repeated for each question, its answers and the indication of which answer is correct.*/
+
+            { question: "When was the Rubiks cube released?", answers: [1968, 1999, 1974], correct: 2 }
+
+          ]; /*Here, the semicolon is used to divide the JavaScript code into different sections.*/
+
+
+          let currentQ = 0;
+          let score = 0;
+          /*The "let" keyword is then again utilised to identify to the device that the next word will be a variable, shown with both the "currentQ" and "score" identifiers, keeping track of both the current question that the user is on and their score.*/
+
+
+          askQuestion = () => {
+            /*In order to repeat the same code for each question, an Arrow Function is created, this code wrapped up in a Function (as these act as groups of code, which may be repeated).*/
+
+            let thisQuestion = questions[currentQ];
+            /* This "let" keyword tells the device the next word is a Variable, drawing the question that the user is currently on, from the array, the square brackets ("[]") retrieving this data, from the "currentQ".*/
+
+
+            document.getElementById("currentQuestionNumber").textContent =
+              currentQ + 1;
+                /* Here, this Variable stores the current question number, the element (identified with the above string, "currentQuestionNumber").*/
+
+                /*This is combined with the "textContent", assigning its value to the next identifier ("currentQ"), the overall code segment utilised to ultimately update the current question number.*/
+
+            document.getElementById("question").textContent = thisQuestion.question;
+                  /* This is again used, updating the prior displayed question with the current question.*/
+
+            let answerContainer = document.getElementById("answers");
+            /* Here, the "let" is used to identify the next word as a Variable ("answerContainer"), assigned via an assignment operator to the "document.getElementById("answers")" code, the "answers" String referencing the initial varible toward this String.*/
+
+
+            while (answerContainer.firstChild) {
+              /*Here, to get rid of remaining answers, the "while" keyword is used as to signify the condition of the loop, checking its condition every time the loop finished a cycle, the condition being that as long as there is a 'firstChild' element within the "answers" container, the loop will still continue to loop, removing whatever is inside the container as long as there's still something remaining within the container*/
+              answerContainer.firstChild.remove();
+            } /*Here, the 'Curly Brace' is utilised to cut up the code*/
+
+            for (let i = 0; i < thisQuestion.answers.length; i++) {
+            /* Here, the 'for' keyword (loop) dictates how to loop the contained code, looping each item contained within "thisQuestion", the answers array and adding an <a> element to each container.*/
+
+              let thisButton = document.createElement("a");
+              /*This above code is used ("createElement"), creating the buttons for each answer*/
+
+              thisButton.className = "answerButton";
+              /*This code is then given a Class name, via the use of a String element, allowing for this to then be further stylised within the CSS file ("CSS/Style.css").*/
+
+              thisButton.setAttribute("data-answer", i);
+              /* This then has a custom attribute added to it, storing the answers index's value, which was then applied to the "thisButton" element, via the ".setAttribute" method, storing the array index of the answer.*/
+
+              let buttonLabel = document.createTextNode(thisQuestion.answers[i]);
+              /* Here, the "createTextNode" element is used to create and insert text within the button without having to use any HTML or XML markups, rather inserting the text as a node ("appendChild").*/
+
+              thisButton.appendChild(buttonLabel);
+              /* The prior mentioned node ("appendChild") is then utilised, adding the text label to the button ("buttonLabel").*/
+
+              thisButton.addEventListener("click", checkAnswer);
+              /*A click activated 'Event Listener' is then added to the button ("thisButton"), its selection activating the "checkAnswer" function, as is documented later on within the JavaScript.*/
+
+              answerContainer.appendChild(thisButton);
+              /*The "answerContainer.appendChild(thisButton);" is then utilised in order to add these buttons onto the quiz page, the "answerContainer" being the one which was depicted within the HTML coding as "class="answerContainer"".*/
+            }
+          };
+
+
+          checkAnswer = evt => {
+            /* Activated by the prior documented "addEventListener" element, the "checkAnswer" attributes as an Arrow Function, allowing the device to know whether the answer selected by the user was correct, the details of the selection captured with the use of the "evt" Identifier (Variable).*/
+
+            let thisQuestion = questions[currentQ];
+            /* Once again, the next word is indicated to the device as a Variable via the utilisation of the "let" keyword, the "thisQuestion" element attributed toward the "questions" and "currentQ" array, overall readying the current question for answer comparison.*/
+
+            let thisAnswer = evt.target.getAttribute("data-answer");
+            /* Here, the custom attribute created for each button (containing the array index of their answers) has its attribute value captured with the "getAttribute("data-answer")", telling the computer what answer has been selected.*/
+
+            if (thisAnswer == thisQuestion.correct) {
+              score++;
+              /*The "if" statement here dicates that if the chosen button and the chosen "correct" button are the same, one ('point') will be added to the score.*/
+            }
+
+            nextQuestion();
+            /* Here, another function is created, making the quiz move onto the next question along.*/
+          };
+
+          nextQuestion = () => {/*statement is containted within these "{}" (Curly Brackets) */
+            currentQ++;
+            /* This Arrow Function code increments the variable storing the current Question number, adding one to the current question number as the question is updated.*/
+            if (currentQ < questions.length) {
+              askQuestion();
+              /* Here, an "If / Else" block was created, used to check whether the "currentQuestion" number is actually less than the amount of questions within the quiz as a whole.*/
+            } else {
+              localStorage.setItem("score", score);
+              location.href = "end.html";
+              /* Finally, this indicates, that the "score" should be stored within "localStorage", enabling the "score" value to be ultimately carried over onto the "end.html" page.*/
+            }
+          };
+
+          askQuestion();
+        </script>
+          <!-- End of the code which was sourced from "https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md".-->
+
+
+
+
+        <!--Start of the 'MenuBar'-->
+            <nav>
+              <a href="Homepage.html" class="active">
+                <img class="Home" src="Images\MenuIcons\Off\HomeOff.svg" alt="Home"></a>
+              <a href="Gallery.html">
+                <img class="Gallery" src="Images\MenuIcons\Off\GalleryOff.svg" alt="Gallery"></a>
+              <a href="Timeline.html">
+                <img class="Timeline" src="Images\MenuIcons\Off\TimelineOff.svg" alt="Timeline"></a>
+              <a href="Quiz.html">
+                <img class="Quiz" src="Images\MenuIcons\On\QuizOn.svg" alt="Quiz"></a>
+              <a href="Clothes.html">
+                <img class="Clothes" src="Images\MenuIcons\Off\ClothingOff.svg" alt="Clothes"></a>
+            </nav>
+        <!--End of the 'MenuBar'-->
+
+</body>
+</html>

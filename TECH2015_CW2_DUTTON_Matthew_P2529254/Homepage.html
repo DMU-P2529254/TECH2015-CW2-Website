@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Here, the viewport is identified with a 'meta' tag, the line of code used to ensure t he contents of teh website are adjusted correct for a mobile viewport, with this being utilised in coding, observing the mobile view first then adjusting it to desktop as the viewport becomes so.  -->
+    <link rel="stylesheet" href="CSS\Style.css">
+    <title>Knowledge Nook</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Here JQueryCode was sourced for the fade-in, scrolling aniamtions, which can be seen across the website, the Javascript code sourced from "https://jsfiddle.net/tcloninger/e5qaD/"(), with the above "<script src=..." being utilised to link the jQuery effect, making the animation function correctly.-->
+  </head>
+  <body>
+    <!--Start of the 'header'
+    Here, the code for the parralax 'header' was again sourced from
+    "Online Tutorials (2020) Simple Parallax Scrolling Effect with CSS & Vanilla Javascript. 29 March. Available at: https://www.youtube.com/watch?v=TawH-AqHTXc&t=207s (Accessed: 21 April 2021)."-->
+
+    <!--Removing a number of "img" elements simplified the animation, allowing for it to be capable of running on mobile devices, as was reiterated mentioned within the "Script/'Script.js'".
+
+   The "id" identifiers, "img" sources and "alt" text was all changed to be suitable for the site at hand, and the content created for it.
+    -->
+
+
+
+
+        <header>
+              <img id="ParralaxBgImage" src="Images\HomeParralax\Back\ParralaxBG.png" alt="Background Parralax Image">
+              <img id="Front" src="Images\HomeParralax\Front\ParralaxFront.png" alt="Foreground parralax Image">
+              <h1 id="ParralaxTextSection">Knowledge Nook</h1>
+    <!--
+    Additonally, as this element was acting a s a header, it was decided that it would be more appropriate to label it as such with the semantic element, replacing the 'section' tag for 'header', in both the html and css coding.
+     -->
+        </header>
+        <script src="Script\Script.js" type="text/javascript"></script>
+    <!--
+    Finally, as this was to be using a separate javascript file, the code had to be changed from the "https://www.youtube.com/watch?v=TawH-AqHTXc&t=207s" (Online Tutorials, 2020) tutorial, linking the javascript in separately.
+      -->
+<!--End of the 'header'<a href="https://www.instagram.com/rickandmorty"><img class="Insta" src="Image\ig.jpg" alt="Instagram"></a>-->
+
+
+
+
+  <!--Start of the 'MenuBar'
+  Here, standard html coding was utilised for the nav bar, utilising the leant techniques from prior labratory sessions in order to create this navigation bar.
+  -->
+    <nav>
+      <!--"class" acts as an identifier, aiding in later CSS adjustments being made to the menu bar, the source ("src") indicating the create icon to utilise for each menu slot, with the "alt" aiding with accessibility for those with impairments using screenreaders. -->
+      <a href="Homepage.html">
+        <!-- The selected page is linked to this item via the ""<a href=" elelemt -->
+        <img class="Home" src="Images\MenuIcons\On\HomeOn.svg" alt="Home"></a>
+          <!--The 'alt' attribute is included here for screen readers, ensuring accessibility.-->
+
+      <a href="Gallery.html">
+        <img class="Gallery" src="Images\MenuIcons\Off\GalleryOff.svg" alt="Gallery"></a>
+
+      <a href="Timeline.html">
+        <img class="Timeline" src="Images\MenuIcons\Off\TimelineOff.svg" alt="Timeline"></a>
+
+      <a href="Quiz.html">
+        <img class="Quiz" src="Images\MenuIcons\Off\QuizOff.svg" alt="Quiz"></a>
+
+      <a href="Clothes.html">
+        <img class="Clothes" src="Images\MenuIcons\Off\ClothingOff.svg" alt="Clothes"></a>
+    </nav>
+      <!--Here, ".svg" icons were ultimately chosen as they maintain a crisp quality across any device and any resolution they happen to be loaded into.-->
+  <!--End of the 'MenuBar'-->
+
+
+
+
+<!--Start of the 'About'-->
+<!-- Here, the 'About section was layered into various sections as to allow for the layout to be responsive based upon the devices viewport it is being viewed with-->
+<main class="About">
+  <!--About the Gallery-->
+    <article class="AboutTile">
+        <h2>Gallery</h2>
+      <!--About Image-->
+      <section class="AboutImage">
+        <img id="TheAboutImagery" src="Images\AboutIcons\GalleryAboot.svg" alt="About the Gallery">
+      </section>
+      <!--About Paragraph-->
+      <section class="AboutText">
+        <p id="AboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum libero a erat vehicula tempor. Vivamus sed euismod elit. Vestibulum nec diam odio. Phasellus a magna scelerisque, dictum augue nec, dictum odio. Pellentesque pellentesque eros in egestas aliquet. Duis volutpat libero sit amet placerat dictum.</p>
+      </section>
+    </article>
+
+
+  <!--About the Timeline-->
+    <article class="AboutTile">
+      <h2>Timeline</h2>
+      <!--About Image-->
+      <section class="AboutImage">
+        <img id="TheAboutImagery" src="Images\AboutIcons\TimelineAboot.svg" alt="About the Timeline">
+      </section>
+      <!--About Paragraph-->
+      <section class="AboutText">
+        <p id="AboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum libero a erat vehicula tempor. Vivamus sed euismod elit. Vestibulum nec diam odio. Phasellus a magna scelerisque, dictum augue nec, dictum odio. Pellentesque pellentesque eros in egestas aliquet. Duis volutpat libero sit amet placerat dictum.</p>
+      </section>
+    </article>
+
+
+  <!--About the Quiz-->
+    <article class="AboutTile">
+      <h2>Quiz</h2>
+      <!--About Image-->
+      <section class="AboutImage">
+        <img id="TheAboutImagery" src="Images\AboutIcons\QuizAboot.svg" alt="About the Quiz">
+      </section>
+      <!--About Paragraph-->
+      <section class="AboutText">
+        <p id="AboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum libero a erat vehicula tempor. Vivamus sed euismod elit. Vestibulum nec diam odio. Phasellus a magna scelerisque, dictum augue nec, dictum odio. Pellentesque pellentesque eros in egestas aliquet. Duis volutpat libero sit amet placerat dictum.</p>
+      </section>
+    </article>
+
+
+    <!--About Clothing-->
+      <article class="AboutTile">
+        <h2>Clothing</h2>
+        <!--About Image-->
+        <section class="AboutImage">
+          <img id="TheAboutImagery" src="Images\AboutIcons\ClothingAboot.svg" alt="About Clothing">
+        </section>
+        <!--About Paragraph-->
+        <section class="AboutText">
+          <p id="AboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum libero a erat vehicula tempor. Vivamus sed euismod elit. Vestibulum nec diam odio. Phasellus a magna scelerisque, dictum augue nec, dictum odio. Pellentesque pellentesque eros in egestas aliquet. Duis volutpat libero sit amet placerat dictum.</p>
+        </section>
+      </article>
+</main>
+<!--End of the 'About'-->
+
+
+
+
+<!--Start of the 'footer'-->
+<footer>
+  <article class="FooterInformation">
+    <img class="FooterLogo" src="Images\Title\TitleDark.png" alt="Knowledge Nook - Logo">
+    <!--The 'alt' attribute is included here for screen readers, ensuring accessibility.-->
+    <p id="FooterP"><b>Email:</b><br>knowledgenook@support.knonook.co.uk<br><br><b>Phone:</b><br>+44 800 0042069 1234 <br></p>
+    <!--"<b>" is used herer to indicate what text elements should hav a 'bold' effectt applied onto them.-->
+    <p id="FooterP2"><b>United Kindom</b><br>123 Fake Street, LE1 2BA, United Kingdom</p>
+  </article>
+  <article class="FooterSocialMediaIcons">
+    <a href="https://www.facebook.com/">
+      <!--This allows for the div to be selected by the user, leading to the hyperlink indicated by the "href=" element-->
+        <section class="Facebook">
+            <section class="SocialIcon"><img id="SocialPic1" src="Images\SocialMedia\Facebook.svg" alt="Facebook Page Link"></section>
+            <!--for each icon a number of "div" elements were layered, containing both the backdrop and '.svg' icon separately, allowing for each to be adjusted separately, their scales and colours now able to be animated with 'CSS' aniamtions.-->
+        </section>
+      </a>
+
+      <a href="https://www.twitter.com/">
+        <section class="Twitter">
+          <section class="SocialIcon2"><img id="SocialPic2" src="Images\SocialMedia\Twitter.svg" alt="Twitter Page Link"></section>
+        </section>
+      </a>
+
+  <a href="https://www.instagram.com/">
+        <section class="Insta">
+          <section class="SocialIcon3"><img id="SocialPic3" src="Images\SocialMedia\Insta.svg" alt="Instagram Page Link"></section>
+        </section>
+      </a>
+    </article>
+  </article>
+</footer>
+<!--End of the 'footer'-->
+
+  </body>
+</html>

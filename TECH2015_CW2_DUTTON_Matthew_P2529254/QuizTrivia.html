@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- The below code has been sourced from "Corah, T. (no date) Browser-Based Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md (Accessed: 24 April 2021)."
+
+    /
+
+    "Corah, T. (no date) Maths Quiz. Available at: https://thomcorah.github.io/dmu-multimedia/resources/mathsGameV3/game.html (Accessed: 25 April 2021)."-->
+
+    <!--This code is further commented on within the "QuizToys.html" page.-->
+      <div class="QuizContainer">
+        <h1>Trivia Quiz</h1>
+        <h2>Question <span id="currentQuestionNumber"></span></h2>
+        <p id="question"></p>
+        <div class="answerContainer" id="answers"><a class="answerButton" data-answer="0"></a><a class="answerButton" data-answer="1"></a><a class="answerButton" data-answer="2"></a></div>
+        <br><br><br><br><br>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript">
+
+          let questions = [
+            { question: "When did the hippie movement start?", answers: [1950, 1960, 1970], correct: 1 },
+            { question: "How tall is the Eiffel Tower in metres?", answers: [263, 127, 324], correct: 2 },
+            { question: "When were mullets popular?", answers: [1980, 1990, 1970], correct: 0 }
+
+          ];
+
+
+          let currentQ = 0;
+          let score = 0;
+
+
+          askQuestion = () => {
+
+            let thisQuestion = questions[currentQ];
+
+
+            document.getElementById("currentQuestionNumber").textContent =
+              currentQ + 1;
+
+
+            document.getElementById("question").textContent = thisQuestion.question;
+
+
+            let answerContainer = document.getElementById("answers");
+
+
+            while (answerContainer.firstChild) {
+
+              answerContainer.firstChild.remove();
+            }
+
+
+            for (let i = 0; i < thisQuestion.answers.length; i++) {
+
+              let thisButton = document.createElement("a");
+
+
+              thisButton.className = "answerButton";
+
+
+              thisButton.setAttribute("data-answer", i);
+
+
+              let buttonLabel = document.createTextNode(thisQuestion.answers[i]);
+
+
+              thisButton.appendChild(buttonLabel);
+
+
+              thisButton.addEventListener("click", checkAnswer);
+
+
+              answerContainer.appendChild(thisButton);
+            }
+          };
+
+
+          checkAnswer = evt => {
+
+            let thisQuestion = questions[currentQ];
+
+            let thisAnswer = evt.target.getAttribute("data-answer");
+
+            if (thisAnswer == thisQuestion.correct) {
+              score++;
+            }
+
+            nextQuestion();
+          };
+
+
+          nextQuestion = () => {
+            currentQ++;
+            if (currentQ < questions.length) {
+              askQuestion();
+            } else {
+              localStorage.setItem("score", score);
+              location.href = "end.html";
+            }
+          };
+
+          askQuestion();
+        </script>
+<!-- End of the code which was sourced from "https://thomcorah.github.io/dmu-multimedia/lab-reader.html?js-quiz-lab.md".-->
+
+
+
+
+        <!--Start of the 'MenuBar'-->
+            <nav>
+              <a href="Homepage.html" class="active">
+                <img class="Home" src="Images\MenuIcons\Off\HomeOff.svg" alt="Home"></a>
+              <a href="Gallery.html">
+                <img class="Gallery" src="Images\MenuIcons\Off\GalleryOff.svg" alt="Gallery"></a>
+              <a href="Timeline.html">
+                <img class="Timeline" src="Images\MenuIcons\Off\TimelineOff.svg" alt="Timeline"></a>
+              <a href="Quiz.html">
+                <img class="Quiz" src="Images\MenuIcons\On\QuizOn.svg" alt="Quiz"></a>
+              <a href="Clothes.html">
+                <img class="Clothes" src="Images\MenuIcons\Off\ClothingOff.svg" alt="Clothes"></a>
+            </nav>
+        <!--End of the 'MenuBar'-->
+
+</body>
+</html>
