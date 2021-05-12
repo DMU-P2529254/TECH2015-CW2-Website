@@ -746,7 +746,7 @@ header {
         width: 100%;
         height: auto;
         padding-bottom: 20vh;
-        bottom: -3;
+        bottom: 3;
         margin: auto;
         background: linear-gradient(to top, #3e183d, #1d1d1b, #1d1d1b);
         /* Here, the intial width was set to "100%", allowing for the effects of the ".About" to effect the entire display of this particular section, "margin: auto;" used to center content, with "top: 0" used to make the space between the top of the about and below the Home page's parralax header non-visible*/
