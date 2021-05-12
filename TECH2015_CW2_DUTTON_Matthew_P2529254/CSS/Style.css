@@ -676,7 +676,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -1vh;
+  top: 1vh;
   /* This above code was simply drawn from the prior mentioned source, the width set to "100%", and height set to "160vw", using responsive units to reduce in height when the viewwidth reduces., any overlapping elements removed via "overflow: hidden;", its contents flex styled with "display: flex;" and all of this centred with "justify-content: center;" and "align-items: center;"*/
 }
                 @media screen and (min-width: 1000px){
