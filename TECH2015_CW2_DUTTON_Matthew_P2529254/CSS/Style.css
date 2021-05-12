@@ -676,7 +676,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 1vh;
   /* This above code was simply drawn from the prior mentioned source, the width set to "100%", and height set to "160vw", using responsive units to reduce in height when the viewwidth reduces., any overlapping elements removed via "overflow: hidden;", its contents flex styled with "display: flex;" and all of this centred with "justify-content: center;" and "align-items: center;"*/
 }
                 @media screen and (min-width: 1000px){
@@ -713,6 +712,7 @@ header {
                                   /*After which, the font was then styled with the prior established typeface, the text then padded with responsive units ("20vw") and ultimately animated with the "fadeIn" aniamtion (created for headers across the site) linked with the "animation-name: fadeIn;" and the duration dicated with " animation-duration: 1s;" and "animation-timing-function: linear;"*/
                             }
 #Front{
+  bottom: 0;
   z-index: 2;
   /* Last of all, the code was again copied from the source, utilising "z-index: 2;" to position this layer infornt of the others.*/
 }
