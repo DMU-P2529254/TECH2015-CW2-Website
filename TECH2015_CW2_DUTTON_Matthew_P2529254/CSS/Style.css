@@ -420,29 +420,42 @@ h6 {
     }
           .ImageTimeline {
             width: 100%;
-            height: 80vh;
+            height: 70vh;
             background-color: white;
             border-radius: 40px 40px 40px 40px;
             overflow: hidden;
             box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
             /* The above code was utilised here, setting the scaling (width and height) as has been peformed prior, with responsive units, the groups border radius stylised, allowing for curved edges, the "overflow: hidden;" to ensure the image confromed to this CSS styling.*/
           }
-              @media screen and (max-width: 700px) {
+          @media screen and (max-width: 1000px) {
+            .ImageTimeline {
+              height: 45vh;
+              /*This image container was then made responsive, at a viewing width of 1000px this grouping would shrink to a height of 45vh.*/
+            }
+          }
+              @media screen and (max-width: 750px) {
                 .ImageTimeline {
                   height: 30vh;
-                  /*As has been displayed prior, this was then made responsive, at a viewing width of 700px this grouping would shrink to a height of 30vh.*/
+                  /*As has been displayed prior, this was then made responsive, at a viewing width of 750px this grouping would shrink to a height of 30vh.*/
                 }
               }
                     @media screen and (max-width: 500px) {
                       .ImageTimeline {
-                        height: 25vh;
-                        /*At a 500px view width, the height would further shrink to 25vh.*/
+                        height: 20vh;
+                        /*At a 500px view width, the height would further shrink to 20vh.*/
                       }
                     }
-                            @media screen and (max-width: 300px) {
+                            @media screen and (max-width: 400px) {
                               .ImageTimeline {
-                                height: 20vh;
-                              /*And finally, at a 300px viewing width the height would again shrink, this time to 20vh.*/
+                                height: 15vh;
+                              /*At a 400px viewing width the height would again shrink, this time to 15vh.*/
+                              }
+                            }
+
+                            @media screen and (max-width: 250px) {
+                              .ImageTimeline {
+                                height: 10vh;
+                              /*And finally, at a 250px viewing width the height would again shrink, this time to 10vh.*/
                               }
                             }
               #TimeImage {
