@@ -269,7 +269,7 @@ body {
                             /*This code was again sourced from the prior mentioned source ("W3schools. (no date) How TO - Image Hover Overlay. Available at: https://www.w3schools.com/howto/howto_css_image_overlay.asp (Accessed: 29 April 2021).") the code filling the ovelays opacity when each image is hovered over.*/
                           }
                               /*The Below code was added afterwards to this*/
-                                      .container:click .overlay {
+                                      .container:active .overlay {
                                         opacity: 1;
                                         /* As to ensure that mobile users may also take advantage of this feature, a click activated alternative was also created, sporting the same result just with a altered input.*/
                                       }
@@ -787,7 +787,7 @@ header {
                         display: block;
                         margin-left: auto;
                         margin-right: auto;
-                        padding-bottom: 10;
+                        padding-bottom: 3vh;
                         /*For the imagery itself, its own scaling needed to be used, removing thte restrictions of a parent group sizing it, as such the responsive "vw" units were utilised as to adjust the width of the image itself, which had been "id" tagged.*/
                       }
                                     @media screen and (max-width: 450px){
